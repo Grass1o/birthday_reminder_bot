@@ -1,0 +1,11 @@
+version: "3.8"  
+
+services:  
+  bot:  
+    build: .  
+    environment:  
+      - TELEGRAM_TOKEN=your_telegram_bot_token  
+    volumes:  
+      - ./bot:/app  
+      - ./db:/app/db  
+    restart: unless-stopped
